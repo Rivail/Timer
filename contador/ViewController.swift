@@ -1,25 +1,39 @@
-//
-//  ViewController.swift
-//  contador
-//
-//  Created by Riva on 12/09/16.
-//  Copyright © 2016 Riva. All rights reserved.
-//
+ //criando um contador no device
 
-import UIKit
+ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBAction func clicaBotao(sender: AnyObject) {
+        
+        for(var i = 0; i<=50; i+=1)
+        {
+        
+      
+         meuTexto.text = meuTexto.text+"\nNumero:\(i)"
+        
+        }
+        
+        var i = 0
+        
+        while (i < 75)
+        {
+            i+=1
+            print(i)
+        }
+        
+    }
+    @IBOutlet weak var meuTexto: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+       
+        
+        meuTexto.text = ""
     }
-
+   
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
-}
-
+ }
